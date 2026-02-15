@@ -17,7 +17,7 @@ services:
       - key: OPENCLAW_GATEWAY_TOKEN
         generateValue: true
       - key: NODE_OPTIONS
-        value: --max-old-space-size=1536
+        value: --max-old-space-size=420 
     disk:
       name: openclaw-data
       mountPath: /data
