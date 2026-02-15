@@ -4,6 +4,7 @@ services:
     runtime: docker
     plan: starter
     healthCheckPath: /health
+    startCommand: node dist/cli.js gateway
     envVars:
       - key: PORT
         value: "8080"
