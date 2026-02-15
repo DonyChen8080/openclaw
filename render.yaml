@@ -4,7 +4,7 @@ services:
     runtime: docker
     plan: starter
     healthCheckPath: /health
-    startCommand: node dist/cli.js gateway
+#    startCommand: node dist/cli.js gateway
     envVars:
       - key: PORT
         value: "8080"
@@ -18,7 +18,7 @@ services:
         generateValue: true
       - key: NODE_OPTIONS
         value: --max-old-space-size=1536
-#    disk:
-#      name: openclaw-data
-#      mountPath: /data
-#      sizeGB: 1
+    disk:
+      name: openclaw-data
+      mountPath: /data
+      sizeGB: 1
